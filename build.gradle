@@ -8,9 +8,7 @@ group = 'com.smarterReconcilation'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
-	}
+	sourceCompatibility = '17'
 }
 
 repositories {
@@ -27,6 +25,34 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+
+// Database
+	runtimeOnly 'org.postgresql:postgresql'
+	implementation 'org.liquibase:liquibase-core'
+
+	// AI/ML
+	implementation 'org.deeplearning4j:deeplearning4j-core:1.0.0-M2.1'
+	implementation 'org.nd4j:nd4j-native-platform:1.0.0-M2.1'
+	implementation 'ai.djl:api:0.25.0'
+	implementation 'ai.djl.huggingface:tokenizers:0.10.0'
+	implementation 'ai.djl.tensorflow:tensorflow-engine:0.10.0'
+	implementation 'ai.djl.tensorflow:tensorflow-model-zoo:0.10.0'
+
+	// Financial Calculations
+	implementation 'org.apache.commons:commons-math3:3.6.1'
+	implementation 'com.google.code.gson:gson:2.10.1'
+
+	// Utilities
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
+	implementation 'com.opencsv:opencsv:5.7.1'
+
+	// Monitoring
+	implementation 'io.micrometer:micrometer-registry-prometheus'
+
+	// Testing
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.testcontainers:postgresql:1.18.3'
 }
 
 tasks.named('test') {
