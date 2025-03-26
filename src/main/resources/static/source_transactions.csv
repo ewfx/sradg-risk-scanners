@@ -1,0 +1,4 @@
+transactionId,accountNumber,transactionDate,amount,description,reference,transactionType,currency
+TXN001,ACC123,2023-10-01,1000.50,Payment for invoice INV1001,REF1001,DEBIT,USD
+TXN002,ACC456,02-10-2023,2500.75,Service fee,REF1002,CREDIT,EUR
+TXN003,ACC789,10/03/2023,500.00,Monthly subscription,REF1003,DEBIT,USD
